@@ -1,0 +1,15 @@
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/api/ApiOriginFilter.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/RFC3339DateFormat.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/configuration/HomeController.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/api/NotFoundException.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/configuration/CustomInstantDeserializer.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/Swagger2SpringBoot.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/model/ModelApiResponse.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/api/ApiResponseMessage.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/model/Task.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/api/TasklistApiController.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/dao/TaskRepository.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/configuration/JacksonConfiguration.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/api/ApiException.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/configuration/SwaggerDocumentationConfig.java
+/home/maik/projects/is2/interview-task/backend/server/src/main/java/io/swagger/api/TasklistApi.java
