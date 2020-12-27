@@ -1,5 +1,7 @@
 # Project task
 
+Test KLM
+
 Your task is to implement simple TODO application. User should be able to perform the following actions: 
 
 * Create new task in TODO list
