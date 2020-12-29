@@ -3,7 +3,6 @@ package io.swagger.api;
 import io.swagger.dao.TaskRepository;
 import io.swagger.model.ModelApiResponse;
 import io.swagger.model.Task;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -14,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import sun.management.VMOptionCompositeData;
 
 import javax.annotation.Generated;
 import javax.validation.constraints.*;
@@ -27,24 +25,23 @@ import java.util.List;
 @RestController
 public class TasklistApiController implements TasklistApi {
 
-    private static final Logger log = LoggerFactory.getLogger(TasklistApiController.class);
+    /** Logger */
+    private static final Logger m_Logger = LoggerFactory.getLogger(TasklistApiController.class);
 
-    private final ObjectMapper objectMapper;
-
-    private final HttpServletRequest request;
+    /** the api request call with content */
+    private final HttpServletRequest m_Request;
 
     @Autowired
     private TaskRepository m_TaskRepo;
 
     @Autowired
-    public TasklistApiController(ObjectMapper objectMapper, HttpServletRequest request) throws IOException {
-        this.objectMapper = objectMapper;
-        this.request = request;
+    public TasklistApiController(HttpServletRequest request) throws IOException {
+        this.m_Request = request;
     }
 
     @Override
     public ResponseEntity<? extends Object> addTask(@ApiParam(value = "Task object with a valid task name. (Not null or blank)" ,required=true )  @Valid @RequestBody Task newTask) {
-        String accept = request.getHeader("Accept");
+        String accept = m_Request.getHeader("Accept");
         ModelApiResponse modelApiResponse = new ModelApiResponse();
         if (accept != null && accept.contains("application/json"))
         {
@@ -83,7 +80,7 @@ public class TasklistApiController implements TasklistApi {
 
     @Override
     public ResponseEntity<? extends Object> getTasks() {
-        String accept = request.getHeader("Accept");
+        String accept = m_Request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
                 List<Task> allTasks = m_TaskRepo.findAll();
                 return new ResponseEntity<List<Task>>(allTasks, HttpStatus.OK);
@@ -96,7 +93,7 @@ public class TasklistApiController implements TasklistApi {
 
     @Override
     public ResponseEntity<? extends  Object> updateTask(@ApiParam(value = "Task object with changed data. Invalid properties will not be changed. E.g.: blank taskName." ,required=true )  @Valid @RequestBody Task updatedTask) {
-        String accept = request.getHeader("Accept");
+        String accept = m_Request.getHeader("Accept");
         ModelApiResponse modelApiResponse = new ModelApiResponse();
 
         if (accept != null && accept.contains("application/json")) {

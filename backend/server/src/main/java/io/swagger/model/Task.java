@@ -16,7 +16,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.*;
 
 /**
- * Task entity
+ * Task model call, necessary for database communication.
  */
 @Entity
 @Validated
@@ -41,15 +41,13 @@ public class Task   {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true)
   @NotNull
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
-    this.id = id;
-  }
+
 
 
   /**
