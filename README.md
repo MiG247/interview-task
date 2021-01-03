@@ -33,6 +33,7 @@ npm install
 
 ### 3.) Start the applications
 **a.) Run the server**
+
 Go to [server](https://github.com/MiG247/interview-task/tree/klm-solution/backend/server "server") and execute:
 ```
 java -jar target/todo-application-backend-1.0.0.jar
@@ -40,6 +41,7 @@ java -jar target/todo-application-backend-1.0.0.jar
 This will start the server, which will be available at `localhost:30808`. The port can be defined in [application.properties](https://github.com/MiG247/interview-task/blob/klm-solution/backend/server/src/main/resources/application.properties "application.properties") (*Notice:* The server must be reinstalled after property changes)
 
 **b.) Run the client**
+
 Go to [frontend](https://github.com/MiG247/interview-task/tree/klm-solution/frontend "frontend") and execute:
 ```
 npm run serve
