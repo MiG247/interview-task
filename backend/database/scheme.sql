@@ -1,0 +1,5 @@
+CREATE TABLE task (
+  id VARCHAR(255) PRIMARY KEY,
+  task_name VARCHAR(255),
+  done BOOLEAN
+);
